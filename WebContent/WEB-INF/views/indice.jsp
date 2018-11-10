@@ -9,7 +9,13 @@
 <title>Autobus</title>
 </head>
 <body>
-	<h1 style="text-align: center;">hola</h1>
+	<h1 style="text-align: center;"><spring:message code="title"/></h1>
 	<br>
+	<h2 style="text-align: center;"><spring:message code="welcome"/></h2>
+	<br />
+	<br /><spring:message code="choose.option"/>
+	<br />
+	<a href="sacarBillete"><spring:message code="show.sacarbilletes"/></a>
+	<br />
 </body>
 </html>

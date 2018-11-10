@@ -23,7 +23,7 @@ public class BienvenidaController {
 
 	@RequestMapping("/menu")
 	public String index() {
-		System.out.println("Executing private/menu controller for user ");
+		System.out.println("Ejecutando el controlador de /menu para visitante");
 		return "indice";
 	}
 

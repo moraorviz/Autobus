@@ -15,5 +15,13 @@
 		<property name="basename" value="messages" />
 	</bean>
 	
+	<bean id="estacionManagerService"
+		class="impl.mario.negocio.estacionmanager.EstacionManagerEJBService">
+	</bean>
+	
+	<bean id="estacionManager"
+		class="impl.mario.negocio.estacionmanager.EstacionManager" />
+	
+	<bean id="estacionDataService" class="impl.mario.persistencia.estacion.EstacionDAO" />
 
 </beans>
