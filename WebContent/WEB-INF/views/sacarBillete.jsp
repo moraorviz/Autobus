@@ -30,6 +30,8 @@
 		<form:select itemValue="id" itemLabel="description"  path="numeroPasajeros" items="${families}" />
 		<br />
 		<input type="submit"/>
+		<br />
+		<a href="/Autobus"><spring:message code="show.volveralmenu"/></a>
 	</form:form>
 </body>
 </html>

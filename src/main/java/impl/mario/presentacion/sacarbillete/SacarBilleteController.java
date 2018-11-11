@@ -23,6 +23,7 @@ import com.mario.modelo.Estacion;
 import com.mario.modelo.Family;
 
 @Controller
+@SessionAttributes("billeteRegistro")
 public class SacarBilleteController {
 	
 	@Autowired
@@ -71,7 +72,7 @@ public class SacarBilleteController {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String newBook(@ModelAttribute BilleteRegistro billeteRegistro) 
+	public String newBook(@ModelAttribute BilleteRegistro billeteRegistro, Model model) 
 	{
 
 		try {
@@ -82,7 +83,7 @@ public class SacarBilleteController {
 			e.printStackTrace();
 		}
 		
-		return "redirect:sacarBillete";
+		return "redirect:trayectosDisponibles";
 	}
 
 	

@@ -50,20 +50,29 @@ public class HorarioManager implements HorarioManagerService {
 		Random random = new Random();
 		ArrayList<Horario> horariosArray = new ArrayList<Horario>();
 		
-		for (int i=1; i<11; i++) 
+		for (int i=0; i<500; i++) 
 		{
-			estacionSalida = random.nextInt(10);
-			estacionLlegada = random.nextInt(10);
+			estacionSalida = random.nextInt(11);
+			estacionLlegada = getRandomWithExclusion(random, 1, 10, estacionSalida);
 			randomDay = ThreadLocalRandom.current().nextLong(minDay, maxDay);
 			randomDate = LocalDate.ofEpochDay(randomDay);
 			date = Date.valueOf(randomDate);
-			if (estacionSalida==estacionLlegada) {
-				break;
-			}
+			
 			horariosArray.add(new Horario(estacionLlegada, estacionSalida, date, date, horaSalida, horaLlegada));
 		}
 		
 		return horariosArray;
+	}
+	
+	public static int getRandomWithExclusion(Random rnd, int start, int end, int... exclude) {
+	    int random = start + rnd.nextInt(end - start + 1 - exclude.length);
+	    for (int ex : exclude) {
+	        if (random < ex) {
+	            break;
+	        }
+	        random++;
+	    }
+	    return random;
 	}
 	
 	

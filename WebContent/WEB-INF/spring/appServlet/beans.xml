@@ -27,8 +27,15 @@
 		
 	<bean id="horarioManagerService"
 		class="impl.mario.negocio.horariomanager.HorarioManagerEJBService"></bean>
+		
+	<bean id="billeteRegistroManager"
+		class="impl.mario.negocio.billeteregistromanager.BilleteRegistroManager" />
+		
+	<bean id="billeteRegistroManagerService"
+		class="impl.mario.negocio.billeteregistromanager.BilleteRegistroManagerEJBService"></bean>
 	
 	<bean id="estacionDataService" class="impl.mario.persistencia.estacion.EstacionDAO" />
 	<bean id="horarioDataService" class="impl.mario.persistencia.horario.HorarioDAO" />
+	<bean id="billeteRegistroDataService" class="impl.mario.persistencia.billeteregistro.BilleteRegistroDAO" />
 
 </beans>

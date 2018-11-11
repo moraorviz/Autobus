@@ -81,5 +81,11 @@ public class Horario {
 	public void setHoraLlegada(Time horaLlegada) {
 		this.horaLlegada = horaLlegada;
 	}
-
+	@Override
+	public String toString() {
+		return "Horario [horarioId=" + horarioId + ", estacionSalidaId=" + estacionSalidaId + ", estacionLlegadaId="
+				+ estacionLlegadaId + ", fechaSalida=" + fechaSalida + ", fechaLlegada=" + fechaLlegada
+				+ ", horaSalida=" + horaSalida + ", horaLlegada=" + horaLlegada + "]";
+	}
+	
 }
