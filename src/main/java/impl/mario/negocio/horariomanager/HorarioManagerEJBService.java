@@ -1,5 +1,6 @@
 package impl.mario.negocio.horariomanager;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,12 @@ public class HorarioManagerEJBService implements HorarioManagerService {
 	public void setHorario(Horario horario) throws Exception {
 		// TODO Auto-generated method stub
 		horarioManager.setHorario(horario);
+	}
+
+	@Override
+	public ArrayList<Horario> generarDatosTest() throws Exception {
+		// TODO Auto-generated method stub
+		return horarioManager.generarDatosTest();
 	}
 	
 }

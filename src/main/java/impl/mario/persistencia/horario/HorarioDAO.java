@@ -75,7 +75,7 @@ public class HorarioDAO implements HorarioDataService {
 			Class.forName(SQL_DRV);
 			con = DriverManager.getConnection(SQL_URL, "MMORANOO", "MIW2018");
 
-			ps = con.prepareStatement("select max(id) as maximo from horario");
+			ps = con.prepareStatement("select max(horario_id) as maximo from horario");
 			rs = ps.executeQuery();
 			Integer id=0;
 			while (rs.next()) {
@@ -104,6 +104,7 @@ public class HorarioDAO implements HorarioDataService {
 				ps.close();
 				con.close();
 			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		}
 	}

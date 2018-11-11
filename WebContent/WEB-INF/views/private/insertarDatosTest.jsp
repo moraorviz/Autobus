@@ -12,5 +12,6 @@
 	<br>
 	<h2 style="text-align: center;"><spring:message code="welcome"/></h2>
 	<br />
+	<br> Insertados datos en la base de datos.
 </body>
 </html>
