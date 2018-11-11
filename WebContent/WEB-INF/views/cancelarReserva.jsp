@@ -13,12 +13,8 @@
 	<br>
 	<h2 style="text-align: center;"><spring:message code="welcome"/></h2>
 	<br />
-	<br /><spring:message code="choose.option"/>
+	<br />Cancela tu reserva aqui
 	<br />
-	<a href="sacarBillete"><spring:message code="show.sacarbilletes"/></a>
-	<br />
-	<a href="insertarDatosTest"><spring:message code="show.insertardatostest"/></a>
-	<br />
-	<a href="cancelarReserva"><spring:message code="show.cancelarreserva"/></a>
+	
 </body>
 </html>

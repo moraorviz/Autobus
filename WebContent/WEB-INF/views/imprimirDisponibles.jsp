@@ -5,14 +5,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <html>
-<head>
-<title>Amazin</title>
-</head>
 <body>
-	<h1 style="text-align: center;"><spring:message code="title"/></h1>
-	<br>
-	<h2 style="text-align: center;"><spring:message code="welcome"/></h2>
-	<br />
 	<br> <spring:message code="show.idas"/>
 	<br>
 	<table>
@@ -60,8 +53,11 @@
 	</table>
     </c:if>
 	<br />
-	<a href="sacarBillete"><spring:message code="show.atras"/></a>
-	<a href="comprarBillete"><spring:message code="show.comprar"/></a>
-	<a href="imprimirDisponibles"><spring:message code="show.imprimir"/></a>
+	
+	
 </body>
 </html>
+
+<script>
+    window.print();
+</script>
