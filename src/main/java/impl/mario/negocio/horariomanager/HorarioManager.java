@@ -41,7 +41,7 @@ public class HorarioManager implements HorarioManagerService {
 		int estacionSalida;
 		int estacionLlegada;
 		long minDay = LocalDate.now().toEpochDay();
-		long maxDay = LocalDate.of(2018,  12, 31).toEpochDay();
+		long maxDay = LocalDate.of(2018, 12, 31).toEpochDay();
 		long randomDay;
 		LocalDate randomDate;
 		Date date;
@@ -50,7 +50,7 @@ public class HorarioManager implements HorarioManagerService {
 		Random random = new Random();
 		ArrayList<Horario> horariosArray = new ArrayList<Horario>();
 		
-		for (int i=0; i<10; i++) 
+		for (int i=1; i<11; i++) 
 		{
 			estacionSalida = random.nextInt(10);
 			estacionLlegada = random.nextInt(10);

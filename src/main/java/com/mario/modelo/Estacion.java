@@ -5,7 +5,7 @@ public class Estacion {
 	private int estacionId;
 	private String nombre;
 	
-	public int getId() {
+	public int getEstacionId() {
 		return estacionId;
 	}
 	public void setEstacionId(int estacionId) {

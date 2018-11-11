@@ -15,10 +15,19 @@
 	<br> <spring:message code="show.infoviaje"/>
 	<form:form modelAttribute="billeteRegistro">
 		<spring:message code="select.estacionsalida"/>
-		<form:select itemValue="id" itemLabel="nombre"  path="estacionSalida" items="${listaEstaciones}" />
+		<form:select itemValue="estacionId" itemLabel="nombre"  path="estacionSalidaId" items="${listaEstaciones}" />
 		<br />
 		<spring:message code="select.estacionllegada"/>
-		<form:select itemValue="id" itemLabel="nombre"  path="estacionLlegada" items="${listaEstaciones}" />
+		<form:select itemValue="estacionId" itemLabel="nombre"  path="estacionLlegadaId" items="${listaEstaciones}" />
+		<br />
+		<spring:message code="select.fechadesalida"/>
+		<form:select itemValue="fechaSalida" itemLabel="fechaSalida"  path="horario.fechaSalida" items="${listaHorarios}" />
+		<br />
+		<spring:message code="select.tipodeviaje"/>
+		<form:select itemValue="estado" itemLabel="descripcion"  path="idaYvuelta" items="${condiciones}" />
+		<br />
+		<spring:message code="select.numerodeviajeros"/>
+		<form:select itemValue="id" itemLabel="description"  path="numeroPasajeros" items="${families}" />
 		<br />
 		<input type="submit"/>
 	</form:form>

@@ -9,8 +9,8 @@ public class BilleteRegistro {
 	private Estacion estacionLlegada;
 	private Horario horario;
 	private String codigoTipoRegistro;
-	private boolean soloIda;
-	public boolean idaYvuelta;
+	private boolean idaYvuelta;
+	private int numeroPasajeros;
 	
 	public int getBilleteRegistroId() {
 		return billeteRegistroId;
@@ -54,12 +54,6 @@ public class BilleteRegistro {
 	public void setIdaYvuelta(boolean idaYvuelta) {
 		this.idaYvuelta = idaYvuelta;
 	}
-	public boolean isSoloIda() {
-		return soloIda;
-	}
-	public void setSoloIda(boolean soloIda) {
-		this.soloIda = soloIda;
-	}
 	
 	public String getCodigoTipoRegistro() {
 		return codigoTipoRegistro;
@@ -67,10 +61,16 @@ public class BilleteRegistro {
 	public void setCodigoTipoRegistro(String codigoTipoRegistro) {
 		this.codigoTipoRegistro = codigoTipoRegistro;
 	}
+	public int getNumeroPasajeros() {
+		return numeroPasajeros;
+	}
+	public void setNumeroPasajeros(int numeroPasajeros) {
+		this.numeroPasajeros = numeroPasajeros;
+	}
 	@Override
 	public String toString() {
-		return "BilleteRegistro [estacionSalida=" + estacionSalida + ", estacionLlegada=" + estacionLlegada + 
-				", horario=" + horario + ", idaYvuelta=" + idaYvuelta + "]";
+		return "BilleteRegistro [estacionSalidaId=" + estacionSalidaId + ", estacionLlegadaId=" + estacionLlegadaId + 
+				", horario=" + horario.getFechaSalida() + ", idaYvuelta=" + idaYvuelta + ", numeroPasajeros=" + numeroPasajeros + "]";
 	}
 
 	
