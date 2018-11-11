@@ -21,7 +21,14 @@
 	
 	<bean id="estacionManager"
 		class="impl.mario.negocio.estacionmanager.EstacionManager" />
+		
+	<bean id="horarioManager"
+		class="impl.mario.negocio.horariomanager.HorarioManager" />
+		
+	<bean id="horarioManagerService"
+		class="impl.mario.negocio.horariomanager.HorarioManagerEJBService"></bean>
 	
 	<bean id="estacionDataService" class="impl.mario.persistencia.estacion.EstacionDAO" />
+	<bean id="horarioDataService" class="impl.mario.persistencia.horario.HorarioDAO" />
 
 </beans>

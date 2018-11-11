@@ -35,7 +35,7 @@ public class EstacionDAO implements EstacionDataService {
 			rs = ps.executeQuery();
 
 			while (rs.next()) {
-				//Completamos los datos del Libro en la entidad
+				//Completamos los datos de la en la entidad
 				Estacion estacion = new Estacion();
 				estacion.setEstacionId(rs.getInt("estacion_id"));
 				estacion.setNombre(rs.getString("nombre"));

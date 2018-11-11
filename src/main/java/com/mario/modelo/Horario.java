@@ -7,8 +7,8 @@ import java.sql.Time;
 public class Horario {
 	
 	private int horarioId;
-	private Estacion estacionSalida;
-	private Estacion estacionLlegada;
+	private int estacionSalidaId;
+	private int estacionLlegadaId;
 	private Date fechaSalida;
 	private Date fechaLlegada;
 	private Time horaSalida;
@@ -20,17 +20,18 @@ public class Horario {
 	public void setHorarioId(int horarioId) {
 		this.horarioId = horarioId;
 	}
-	public Estacion getEstacionSalida() {
-		return estacionSalida;
+
+	public int getEstacionSalidaId() {
+		return estacionSalidaId;
 	}
-	public void setEstacionSalida(Estacion estacionSalida) {
-		this.estacionSalida = estacionSalida;
+	public void setEstacionSalidaId(int estacionSalidaId) {
+		this.estacionSalidaId = estacionSalidaId;
 	}
-	public Estacion getEstacionLlegada() {
-		return estacionLlegada;
+	public int getEstacionLlegadaId() {
+		return estacionLlegadaId;
 	}
-	public void setEstacionLlegada(Estacion estacionLlegada) {
-		this.estacionLlegada = estacionLlegada;
+	public void setEstacionLlegadaId(int estacionLlegadaId) {
+		this.estacionLlegadaId = estacionLlegadaId;
 	}
 	public Date getFechaSalida() {
 		return fechaSalida;

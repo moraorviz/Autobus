@@ -17,6 +17,9 @@
 		<spring:message code="select.estacionsalida"/>
 		<form:select itemValue="id" itemLabel="nombre"  path="estacionSalida" items="${listaEstaciones}" />
 		<br />
+		<spring:message code="select.estacionllegada"/>
+		<form:select itemValue="id" itemLabel="nombre"  path="estacionLlegada" items="${listaEstaciones}" />
+		<br />
 		<input type="submit"/>
 	</form:form>
 </body>
