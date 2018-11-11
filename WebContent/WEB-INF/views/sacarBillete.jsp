@@ -13,5 +13,11 @@
 	<br>
 	<h2 style="text-align: center;"><spring:message code="welcome"/></h2>
 	<br> <spring:message code="show.infoviaje"/>
+	<form:form modelAttribute="billeteRegistro">
+		<spring:message code="select.estacionsalida"/>
+		<form:select itemValue="id" itemLabel="nombre"  path="estacionSalida" items="${listaEstaciones}" />
+		<br />
+		<input type="submit"/>
+	</form:form>
 </body>
 </html>

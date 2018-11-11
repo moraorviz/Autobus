@@ -38,5 +38,11 @@ public class BilleteRegistro {
 	public void setIdaYvuelta(boolean idaYvuelta) {
 		this.idaYvuelta = idaYvuelta;
 	}
-
+	
+	@Override
+	public String toString() {
+		return "BilleteRegistro [estacionSalida=" + estacionSalida + ", estacionLlegada=" + estacionLlegada + 
+				", horario=" + horario + ", idaYvuelta=" + idaYvuelta + "]";
+	}
+	
 }
