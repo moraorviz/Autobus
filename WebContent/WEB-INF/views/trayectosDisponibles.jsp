@@ -19,11 +19,19 @@
 		<tr>
 			<td><b><spring:message code="show.estaciondesalida"/></b></td>
 			<td><b><spring:message code="show.estaciondellegada"/></b></td>
+			<td><b><spring:message code="show.fechadesalida"/></b></td>
+			<td><b><spring:message code="show.horadesalida"/></b></td>
+			<td><b><spring:message code="show.fechadellegada"/></b></td>
+			<td><b><spring:message code="show.horadellegada"/></b></td>
 		</tr>
 	<c:forEach items="${disponibles}" var="horario">
 			<tr>
-				<td><c:out value="${horario.estacionSalidaId}"></c:out></td>
-				<td><c:out value="${horario.estacionLlegadaId}"></c:out></td>
+				<td><c:out value="${horario.estacionSalidaNombre}"></c:out></td>
+				<td><c:out value="${horario.estacionLlegadaNombre}"></c:out></td>
+				<td><c:out value="${horario.fechaSalida}"></c:out></td>
+				<td><c:out value="${horario.horaSalida}"></c:out></td>
+				<td><c:out value="${horario.fechaLlegada}"></c:out></td>
+				<td><c:out value="${horario.horaLlegada}"></c:out></td>
 			</tr>
 		</c:forEach>
 	</table>

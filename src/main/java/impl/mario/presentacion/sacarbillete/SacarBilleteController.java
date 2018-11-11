@@ -1,6 +1,7 @@
 package impl.mario.presentacion.sacarbillete;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
 
@@ -72,11 +73,11 @@ public class SacarBilleteController {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String newBook(@ModelAttribute BilleteRegistro billeteRegistro, Model model) 
+	public String trayectosDisponibles(@ModelAttribute BilleteRegistro billeteRegistro, Model model) 
 	{
 
 		try {
-			System.out.println("Ejecutando el metodo POST");
+			System.out.println("Ejecutando el metodo POST para la vista de trayectos disponibles");
 			System.out.println(billeteRegistro.toString());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -86,5 +87,4 @@ public class SacarBilleteController {
 		return "redirect:trayectosDisponibles";
 	}
 
-	
 }

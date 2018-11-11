@@ -1,6 +1,7 @@
 package impl.mario.presentacion.disponibles;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Vector;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,10 +38,29 @@ public class DisponiblesController {
 		}
 		Vector<Horario> disponibles = billeteRegistroManagerService.getDisponibles(billeteRegistro);
 		for (Horario horario : disponibles) {
+			horario.setEstacionSalidaNombre(getNombreEstacion(horario.getEstacionSalidaId()));
+			horario.setEstacionLlegadaNombre(getNombreEstacion(horario.getEstacionLlegadaId()));
 			System.out.println(horario.toString());
 		}
 		model.addAttribute("disponibles", disponibles);
 		return "trayectosDisponibles";
+	}
+	
+	private String getNombreEstacion(int estacionId) throws Exception
+	{
+		HashMap<Integer, String> estaciones = new HashMap<Integer, String>();
+		estaciones.put(1, "Madrid");
+		estaciones.put(2, "Barcelona");
+		estaciones.put(3, "Valencia");
+		estaciones.put(4, "Sevilla");
+		estaciones.put(5, "Zaragoza");
+		estaciones.put(6, "Malaga");
+		estaciones.put(7, "Murcia");
+		estaciones.put(8, "Palma");
+		estaciones.put(9, "Las Palmas de Gran Canaria");
+		estaciones.put(1, "Bilbao");
+		
+		return estaciones.get(estacionId);
 	}
 
 }

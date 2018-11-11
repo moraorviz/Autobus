@@ -27,6 +27,8 @@ public class Horario {
 	private Date fechaLlegada;
 	private Time horaSalida;
 	private Time horaLlegada;
+	private String estacionSalidaNombre;
+	private String estacionLlegadaNombre;
 	
 	public int getHorarioId() {
 		return horarioId;
@@ -80,6 +82,18 @@ public class Horario {
 	}
 	public void setHoraLlegada(Time horaLlegada) {
 		this.horaLlegada = horaLlegada;
+	}
+	public String getEstacionSalidaNombre() {
+		return estacionSalidaNombre;
+	}
+	public void setEstacionSalidaNombre(String estacionSalidaNombre) {
+		this.estacionSalidaNombre = estacionSalidaNombre;
+	}
+	public String getEstacionLlegadaNombre() {
+		return estacionLlegadaNombre;
+	}
+	public void setEstacionLlegadaNombre(String estacionLlegadaNombre) {
+		this.estacionLlegadaNombre = estacionLlegadaNombre;
 	}
 	@Override
 	public String toString() {
