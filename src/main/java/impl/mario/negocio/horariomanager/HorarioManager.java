@@ -50,7 +50,7 @@ public class HorarioManager implements HorarioManagerService {
 		Random random = new Random();
 		ArrayList<Horario> horariosArray = new ArrayList<Horario>();
 		
-		for (int i=0; i<500; i++) 
+		for (int i=0; i<5000; i++) 
 		{
 			estacionSalida = random.nextInt(11);
 			estacionLlegada = getRandomWithExclusion(random, 1, 10, estacionSalida);

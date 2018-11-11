@@ -6,20 +6,6 @@ import java.sql.Time;
 
 public class Horario {
 	
-	public Horario(int horarioId, int estacionSalidaId, int estacionLlegadaId, Date fechaSalida, Date fechaLlegada,
-			Time horaSalida, Time horaLlegada) {
-		super();
-		this.horarioId = horarioId;
-		this.estacionSalidaId = estacionSalidaId;
-		this.estacionLlegadaId = estacionLlegadaId;
-		this.fechaSalida = fechaSalida;
-		this.fechaLlegada = fechaLlegada;
-		this.horaSalida = horaSalida;
-		this.horaLlegada = horaLlegada;
-	}
-	public Horario() {
-		// TODO Auto-generated constructor stub
-	}
 	private int horarioId;
 	private int estacionSalidaId;
 	private int estacionLlegadaId;
@@ -29,6 +15,25 @@ public class Horario {
 	private Time horaLlegada;
 	private String estacionSalidaNombre;
 	private String estacionLlegadaNombre;
+	
+	
+	
+	public Horario(int estacionSalidaId, int estacionLlegadaId, Date fechaSalida, Date fechaLlegada, Time horaSalida,
+			Time horaLlegada, String estacionSalidaNombre, String estacionLlegadaNombre) {
+		super();
+		this.estacionSalidaId = estacionSalidaId;
+		this.estacionLlegadaId = estacionLlegadaId;
+		this.fechaSalida = fechaSalida;
+		this.fechaLlegada = fechaLlegada;
+		this.horaSalida = horaSalida;
+		this.horaLlegada = horaLlegada;
+		this.estacionSalidaNombre = estacionSalidaNombre;
+		this.estacionLlegadaNombre = estacionLlegadaNombre;
+	}
+
+	public Horario() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	public int getHorarioId() {
 		return horarioId;

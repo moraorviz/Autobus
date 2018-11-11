@@ -1,5 +1,7 @@
 package impl.mario.presentacion.disponibles;
 
+import java.sql.Date;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Vector;
@@ -33,15 +35,24 @@ public class DisponiblesController {
 	public String getMostrarDisponibles(Model model, BilleteRegistro billeteRegistro) throws Exception
 	{
 		System.out.println("Ejecutando el método GET de la vista de mostrar los billetes disponibles");
-		if (billeteRegistro==null) {
-			System.out.println("billeteRegistro es null");
-		}
+		Time timeSalida = Time.valueOf("15:00:00");
+		Time timeLlegada = Time.valueOf("20:00:00");
+		Time timeMadrugada = Time.valueOf("04:00:00");
 		Vector<Horario> disponibles = billeteRegistroManagerService.getDisponibles(billeteRegistro);
+		
+		if (disponibles.size()==0) {
+			disponibles.addElement(new Horario(billeteRegistro.getEstacionSalidaId(), billeteRegistro.getEstacionLlegadaId(), billeteRegistro.getFechaSalida(), 
+					billeteRegistro.getFechaSalida(), timeSalida,	timeLlegada, getNombreEstacion(billeteRegistro.getEstacionSalidaId()), getNombreEstacion(billeteRegistro.getEstacionSalidaId())));
+			disponibles.addElement(new Horario(billeteRegistro.getEstacionSalidaId(), billeteRegistro.getEstacionLlegadaId(), billeteRegistro.getFechaSalida(), 
+					billeteRegistro.getFechaSalida(), timeLlegada,	timeMadrugada, getNombreEstacion(billeteRegistro.getEstacionSalidaId()), getNombreEstacion(billeteRegistro.getEstacionSalidaId())));
+		}
+		
 		for (Horario horario : disponibles) {
 			horario.setEstacionSalidaNombre(getNombreEstacion(horario.getEstacionSalidaId()));
 			horario.setEstacionLlegadaNombre(getNombreEstacion(horario.getEstacionLlegadaId()));
 			System.out.println(horario.toString());
 		}
+		
 		model.addAttribute("disponibles", disponibles);
 		return "trayectosDisponibles";
 	}
@@ -58,7 +69,7 @@ public class DisponiblesController {
 		estaciones.put(7, "Murcia");
 		estaciones.put(8, "Palma");
 		estaciones.put(9, "Las Palmas de Gran Canaria");
-		estaciones.put(1, "Bilbao");
+		estaciones.put(10, "Bilbao");
 		
 		return estaciones.get(estacionId);
 	}

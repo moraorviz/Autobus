@@ -63,11 +63,11 @@ public class SacarBilleteController {
 		condiciones.add(new Condicion(false, "Solo ida"));
 		condiciones.add(new Condicion(true, "Ida y Vuelta"));
 		
+		model.addAttribute("billeteRegistro", new BilleteRegistro());
 		model.addAttribute("families", families);
 		model.addAttribute("condiciones", condiciones);
 		model.addAttribute("listaEstaciones", estacionManagerService.getEstaciones());
 		model.addAttribute("listaHorarios", horarioManagerService.getHorarios());
-		model.addAttribute("billeteRegistro", new BilleteRegistro());
 		System.out.println("returning sacarBillete view");
 		return "sacarBillete";
 	}

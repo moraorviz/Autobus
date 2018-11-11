@@ -21,7 +21,7 @@
 		<form:select itemValue="estacionId" itemLabel="nombre"  path="estacionLlegadaId" items="${listaEstaciones}" />
 		<br />
 		<spring:message code="select.fechadesalida"/>
-		<form:select itemValue="fechaSalida" itemLabel="fechaSalida"  path="horario.fechaSalida" items="${listaHorarios}" />
+		<form:select itemValue="fechaSalida" itemLabel="fechaSalida"  path="fechaSalida" items="${listaHorarios}" />
 		<br />
 		<spring:message code="select.tipodeviaje"/>
 		<form:select itemValue="estado" itemLabel="descripcion"  path="idaYvuelta" items="${condiciones}" />

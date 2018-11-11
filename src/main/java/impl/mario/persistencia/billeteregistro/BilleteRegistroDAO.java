@@ -1,6 +1,7 @@
 package impl.mario.persistencia.billeteregistro;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -43,9 +44,10 @@ public class BilleteRegistroDAO implements BilleteRegistroDataService {
 			Class.forName(SQL_DRV);
 			con = DriverManager.getConnection(SQL_URL, "MMORANOO", "MIW2018");
 
-			ps = con.prepareStatement("select * from HORARIO WHERE estacion_salida_id = ? AND estacion_llegada_id = ?");
+			ps = con.prepareStatement("select * from HORARIO WHERE estacion_salida_id = ? AND estacion_llegada_id = ? AND fecha_salida = ?");
 			ps.setInt(1, billeteRegistro.getEstacionSalidaId());
 			ps.setInt(2, billeteRegistro.getEstacionLlegadaId());
+			ps.setDate(3, Date.valueOf(billeteRegistro.getFechaSalida().toLocalDate()));
 			rs = ps.executeQuery();
 
 			while (rs.next()) {

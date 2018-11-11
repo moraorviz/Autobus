@@ -1,5 +1,7 @@
 package com.mario.modelo;
 
+import java.sql.Date;
+
 public class BilleteRegistro {
 
 	private int billeteRegistroId;
@@ -13,6 +15,7 @@ public class BilleteRegistro {
 	private String codigoTipoRegistro;
 	private boolean idaYvuelta;
 	private int numeroPasajeros;
+	private Date fechaSalida;
 	
 	public int getBilleteRegistroId() {
 		return billeteRegistroId;
@@ -81,10 +84,16 @@ public class BilleteRegistro {
 	public void setEstacionLlegadaNombre(String estacionLlegadaNombre) {
 		this.estacionLlegadaNombre = estacionLlegadaNombre;
 	}
+	public Date getFechaSalida() {
+		return fechaSalida;
+	}
+	public void setFechaSalida(Date fechaSalida) {
+		this.fechaSalida = fechaSalida;
+	}
 	@Override
 	public String toString() {
 		return "BilleteRegistro [estacionSalidaId=" + estacionSalidaId + ", estacionLlegadaId=" + estacionLlegadaId + 
-				", horario=" + horario.getFechaSalida() + ", idaYvuelta=" + idaYvuelta + ", numeroPasajeros=" + numeroPasajeros + "]";
+				", horario=" + fechaSalida + ", idaYvuelta=" + idaYvuelta + ", numeroPasajeros=" + numeroPasajeros + "]";
 	}
 
 	
